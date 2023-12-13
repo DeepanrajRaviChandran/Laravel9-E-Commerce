@@ -84,11 +84,9 @@
                     <div class="product-img-action-wrap">
                       <div class="product-img product-img-zoom">
                         <a href="{{ route('product.details', ['slug' => $product->slug]) }}">
-                          <img class="default-img"
-                            src="{{ asset('assets/imgs/shop/product-') }}{{ $product->id }}-1.jpg"
+                          <img class="default-img" src="{{ asset('assets/imgs/products') }}/{{ $product->image }}"
                             alt="{{ $product->name }}">
-                          <img class="hover-img"
-                            src="{{ asset('assets/imgs/shop/product-') }}{{ $product->id }}-2.jpg"
+                          <img class="hover-img" src="{{ asset('assets/imgs/products') }}/{{ $product->image }}"
                             alt="{{ $product->name }}">
                         </a>
                       </div>
@@ -220,7 +218,7 @@
               @foreach ($nproducts as $nproduct)
                 <div class="single-post clearfix">
                   <div class="image">
-                    <img src="{{ asset('assets/imgs/shop/product-') }}{{ $nproduct->id }}-1.jpg"
+                    <img src="{{ asset('assets/imgs/products') }}/{{ $nproduct->image }}"
                       alt="{{ $nproduct->name }}">
                   </div>
                   <div class="content pt-10">

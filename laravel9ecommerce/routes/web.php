@@ -12,6 +12,8 @@ use App\Http\Livewire\Admin\AdminProductComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\Chat\CreateChat;
+use App\Http\Livewire\Chat\Main;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
@@ -72,6 +74,10 @@ Route::middleware(['auth', 'authadmin'])->group(function () {
 Route::get('/index', 'App\Http\Controllers\StripeController@index')->name('index');
 Route::post('/cart', 'App\Http\Controllers\StripeController@checkout')->name('cart');
 Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
+
+//Chat routes
+Route::get('/chat/users', CreateChat::class)->name('chat.users');
+Route::get('/chat{key?}', Main::class)->name('chat');
 
 
 

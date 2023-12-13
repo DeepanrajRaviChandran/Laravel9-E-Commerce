@@ -12,7 +12,7 @@
           <li>
             <div class="shopping-cart-img">
               <a href="{{ route('product.details', ['slug' => $item->model->slug]) }}"><img alt="{{ $item->model->name }}"
-                  src="{{ asset('assets/imgs/shop/product-') }}{{ $item->model->id }}-1.jpg" /></a>
+                  src="{{ asset('assets/imgs/products') }}/{{ $item->model->image }}" /></a>
             </div>
             <div class="shopping-cart-title">
               <h4>
